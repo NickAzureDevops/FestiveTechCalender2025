@@ -1,7 +1,7 @@
 
 [![Festive Tech Calendar 2025](images/logo.png)](https://festivetechcalendar.com)
 
-# Building Intelligent Apps and AI Agent using AI Foundry
+# Building Intelligent Apps and Agent using Microsoft Foundry
 
 Discover how to build intelligent applications and AI agents leveraging Microsoft Foundry. This session will guide you through:
 - The fundamentals of Microsoft Foundry and its capabilities
