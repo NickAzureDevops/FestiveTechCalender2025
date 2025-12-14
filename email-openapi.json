@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "https://email-proxy-func.azurewebsites.net/api"
+      "url": "https://festivetechcalendar2025-func.azurewebsites.net/api"
     }
   ],
   "paths": {

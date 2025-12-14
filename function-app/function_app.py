@@ -6,7 +6,7 @@ import urllib.error
 
 app = func.FunctionApp(http_auth_level=func.AuthLevel.ANONYMOUS)
 
-LOGIC_APP_URL = "https://prod-84.eastus.logic.azure.com:443/workflows/21829b5b67ca4c45a60cc94e50823206/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=kE8Up8gyg1mIh3Ry9Ao2P5LCiyCNWdrsgyRwCuUqB24"
+LOGIC_APP_URL = "https://prod-10.eastus.logic.azure.com:443/workflows/6542eb8ee3c1421292c5b06b706c3b11/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=PEMkf_WcNo6rl4LF0aUNGzm2NEvG5OLzMaKKjCwcTuE"
 
 @app.route(route="send", methods=["POST"])
 def send_email(req: func.HttpRequest) -> func.HttpResponse:
@@ -36,8 +36,12 @@ def send_email(req: func.HttpRequest) -> func.HttpResponse:
         )
         
         with urllib.request.urlopen(request) as response:
-            result = response.read().decode('utf-8')
-            return func.HttpResponse(result, status_code=200, mimetype="application/json")
+            response.read()  # Consume the response
+            return func.HttpResponse(
+                json.dumps({"status": "success"}),
+                status_code=200,
+                mimetype="application/json"
+            )
             
     except urllib.error.HTTPError as e:
         logging.error(f"HTTP Error: {e.code} - {e.read().decode()}")

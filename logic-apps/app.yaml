@@ -97,8 +97,8 @@
             "type": "Object",
             "value": {
                 "outlook": {
-                    "id": "/subscriptions/64681aa1-73cc-4155-aa97-caa0e4837412/providers/Microsoft.Web/locations/eastus/managedApis/outlook",
-                    "connectionId": "/subscriptions/64681aa1-73cc-4155-aa97-caa0e4837412/resourceGroups/FestiveTechCalender2025-Demo/providers/Microsoft.Web/connections/outlook",
+                    "id": "/subscriptions/SubID/providers/Microsoft.Web/locations/eastus/managedApis/outlook",
+                    "connectionId": "/subscriptions/SubID/resourceGroups/FestiveTechCalender2025-Demo/providers/Microsoft.Web/connections/outlook",
                     "connectionName": "outlook",
                     "connectionProperties": {}
                 }
